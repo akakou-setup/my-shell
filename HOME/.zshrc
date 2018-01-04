@@ -14,7 +14,7 @@ zplug "plugins/git-extras", from:oh-my-zsh, if:"which git"
 zplug "plugins/web-search", from:oh-my-zsh
 
 zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
-zplug "b4b4r07/zsh-gomi", as:command, use:bin, rename-to:rm
+zplug "b4b4r07/zsh-gomi", as:command, use:bin, rename-to:gomi
 
 zplug "themes/bira", from:oh-my-zsh
 
@@ -53,7 +53,16 @@ export SAVEHIST=1000000
 
 setopt auto_cd
 function chpwd() { ls }
+function l(){ ls -a }
+function git-top()
+{
+    cd ./$(git rev-parse --show-cdup)
+}
+
 
 autoload -U compinit
 compinit
 zstyle ':completion:*' list-colors "${LS_COLORS}"
+
+clear
+ls
