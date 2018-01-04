@@ -23,7 +23,7 @@ set hlsearch
 
 set ruler
 set nowrap
-set paste
+"set paste
 
 if &compatible
   set nocompatible               " Be iMproved
