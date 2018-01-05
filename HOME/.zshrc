@@ -46,7 +46,7 @@ setopt globdots
 
 zstyle ':completion:*' menu select interactive
 
-export EDITOR=vim
+export EDITOR=nvim
 export HISTFILE=~/.zhistory
 export HISTSIZE=1000
 export SAVEHIST=1000000
@@ -63,6 +63,8 @@ function git-top()
 autoload -U compinit
 compinit
 zstyle ':completion:*' list-colors "${LS_COLORS}"
+
+alias vim="nvim"
 
 clear
 ls
