@@ -2,21 +2,21 @@ unsetopt BG_NICE
 
 source ~/.zplug/init.zsh
 
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
-zplug "chrissicool/zsh-256color"
-zplug "b4b4r07/enhancd"
+zplug 'zsh-users/zsh-syntax-highlighting'
+zplug 'zsh-users/zsh-history-substring-search'
+zplug 'zsh-users/zsh-autosuggestions'
+zplug 'zsh-users/zsh-completions'
+zplug 'chrissicool/zsh-256color'
+zplug 'b4b4r07/enhancd'
 
-zplug "plugins/git",   from:oh-my-zsh, if:"which git"
-zplug "plugins/git-extras", from:oh-my-zsh, if:"which git"
-zplug "plugins/web-search", from:oh-my-zsh
+zplug 'plugins/git',   from:oh-my-zsh, if:'which git'
+zplug 'plugins/git-extras', from:oh-my-zsh, if:'which git'
+zplug 'plugins/web-search', from:oh-my-zsh
 
-zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
-zplug "b4b4r07/zsh-gomi", as:command, use:bin, rename-to:gomi
+zplug 'junegunn/fzf-bin', as:command, from:gh-r, rename-to:fzf
+zplug 'b4b4r07/zsh-gomi', as:command, use:bin, rename-to:gomi
 
-zplug "themes/bira", from:oh-my-zsh
+zplug 'themes/bira', from:oh-my-zsh
 
 if ! zplug check --verbose; then
   printf 'Install? [y/N]: '
@@ -62,9 +62,16 @@ function git-top()
 
 autoload -U compinit
 compinit
-zstyle ':completion:*' list-colors "${LS_COLORS}"
+zstyle ':completion:*' list-colors '${LS_COLORS}'
 
-alias vim="nvim"
+alias vim='nvim -p'
+alias x='xonsh'
+
+PATH=$PATH:/home/akakou/.gem/ruby/2.5.0/bin
+export ANDROID_HOME=/opt/android-sdk/
+
+export TAB=4
 
 clear
 ls
+

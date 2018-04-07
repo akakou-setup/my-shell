@@ -3,7 +3,7 @@ set nobackup
 set noswapfile
 set autoread
 set hidden
-
+    
 set number
 set virtualedit=onemore
 set autoindent
@@ -12,8 +12,9 @@ set showmatch
 
 set list listchars=tab:\▸\-
 set expandtab
-set tabstop=2
-set shiftwidth=2
+
+set tabstop=4
+let &shiftwidth=$TAB
 
 set ignorecase
 set smartcase
@@ -23,11 +24,8 @@ set hlsearch
 
 set ruler
 set nowrap
-"set paste
 
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+set nocompatible
 
 " Required:
 set runtimepath+=/home/akakou/.cache/dein/repos/github.com/Shougo/dein.vim
@@ -80,5 +78,4 @@ set background=dark
 set cursorline
 
 let g:deoplete#enable_at_startup = 1
-"set clipboard=unnamed,autoselect
 
