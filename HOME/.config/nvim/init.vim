@@ -28,15 +28,15 @@ set nowrap
 set nocompatible
 
 " Required:
-set runtimepath+=/home/akakou/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/home/akakou/.cache/dein')
-  call dein#begin('/home/akakou/.cache/dein')
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/home/akakou/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
  " Toml's file directories
  let s:toml_dir  = $HOME . '/.config/nvim/dein/toml' 
