@@ -1,10 +1,10 @@
 # install zplug
-cp -r ./HOME/.* ~/
-export ZPLUG_HOME=~/.zplug
+cp -r $(pwd)/HOME/.* $HOME/
+export ZPLUG_HOME=$HOME/.zplug
 git clone https://github.com/zplug/zplug $ZPLUG_HOME
 
 # install dein
-mkdir ~/.cache/dein
-cd ~/.cache/dein
+mkdir $HOME/.cache/dein
+cd $HOME/.cache/dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.cache/dein
+sh ./installer.sh $HOME/.cache/dein
