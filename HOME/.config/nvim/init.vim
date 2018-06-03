@@ -31,6 +31,7 @@ set termguicolors
 set background=dark
 set cursorline
 
+
 set nocompatible
 
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
@@ -47,6 +48,7 @@ if dein#load_state('~/.cache/dein')
 
  " Read Toml files and cached
  call dein#load_toml(s:toml,      {'lazy': 0})
+ call dein#load_toml(s:lazy_toml, {'lazy': 1})
   " Required:
   call dein#end()
   call dein#save_state()
@@ -65,7 +67,17 @@ endif
 colorscheme molokai
 
 syntax on
+
+" snap
 let g:deoplete#enable_at_startup = 1
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neocomplcache_auto_completion_start_length = 2
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
 
 " nerd tree colors
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -87,6 +99,8 @@ call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
 
 " map
+"map <C-n> :NERDTreeToggle<CR>
+
 function s:MoveToFileAtStart()
   call feedkeys("\<Space>")
   call feedkeys("\s")
@@ -105,3 +119,5 @@ nnoremap sH <C-w>H
 nnoremap st :<C-u>tabnew<CR>
 map ss :NERDTreeToggle<CR>
 
+" start cmd
+"autocmd VimEnter *  NERDTree | call s:MoveToFileAtStart()

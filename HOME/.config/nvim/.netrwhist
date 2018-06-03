@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/akakou'
+let g:netrw_dirhist_2='/home/akakou/Docments/manage-system/network_manage_system'
+let g:netrw_dirhist_3='/home/akakou/Docments/manage-system/user'
+let g:netrw_dirhist_4='/home/akakou/hoge/8'
+let g:netrw_dirhist_5='/home/akakou/Docments/kadai/fizzbuzz'
+let g:netrw_dirhist_6='/home/akakou/Docments/kadai/hello'
+let g:netrw_dirhist_7='/home/akakou/reg'
+let g:netrw_dirhist_8='/home/akakou/.config/nvim/dein/toml'
