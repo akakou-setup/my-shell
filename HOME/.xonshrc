@@ -1,3 +1,4 @@
+$XONSH_SHOW_TRACEBACK = False
 $XONSH_AUTOPAIR = True
 $AUTO_CD = True
 $PROMPT = "{INTENSE_YELLOW}[ {cwd} ] {GREEN}$ "
