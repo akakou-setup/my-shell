@@ -67,9 +67,12 @@ zstyle ':completion:*' list-colors '${LS_COLORS}'
 alias vim='nvim -p'
 alias x='xonsh'
 
-PATH=$PATH:/home/akakou/.gem/ruby/2.5.0/bin
-export ANDROID_HOME=/opt/android-sdk/
+alias scode="sudo code --user-data-dir=\'\\'/home/akakou/.config/Code/\\'\'" 
+alias kujira='/home/akakou/.my-kujira/kujira'
 
+PATH=$PATH:/home/akakou/.gem/ruby/2.5.0/bin
+PATH=$PATH:/home/akakou/.cargo/bin
+export ANDROID_HOME=/opt/android-sdk/
 export TAB=4
 
 clear
