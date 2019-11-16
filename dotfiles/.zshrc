@@ -64,17 +64,15 @@ autoload -U compinit
 compinit
 zstyle ':completion:*' list-colors '${LS_COLORS}'
 
-alias vim='nvim -p'
-alias x='xonsh'
+if [ "$LS_COLORS" -a -f /etc/DIR_COLORS ]; then
+  eval $(dircolors /etc/DIR_COLORS)
+fi
 
-alias scode="sudo code --user-data-dir=\'\\'/home/akakou/.config/Code/\\'\'" 
+alias vim='nvim -p'
 alias kujira='/home/akakou/.my-kujira/kujira'
 
-PATH=$PATH:/home/akakou/.gem/ruby/2.5.0/bin
-PATH=$PATH:/home/akakou/.cargo/bin
 export ANDROID_HOME=/opt/android-sdk/
 export TAB=4
 
-clear
-ls
+clear && ls
 
