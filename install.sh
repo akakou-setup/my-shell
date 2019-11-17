@@ -1,6 +1,6 @@
 # install dependecies
-nix-env --install neovim zsh zsh-completions \
-    python3 python python3-pip python-pip
+#nix-env --install neovim zsh zsh-completions \
+#    python3 python python3-pip python-pip
 
 # copy
 cp -R dotfiles/.* $HOME/
